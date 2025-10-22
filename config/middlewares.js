@@ -5,7 +5,9 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      origin: ["http://localhost:5173"], // tu frontend Vite
+      origin: [
+        'https://frontend-startdev-production.vercel.app',
+        "http://localhost:5173"], // tu frontend Vite
     },
   },
   "strapi::poweredBy",

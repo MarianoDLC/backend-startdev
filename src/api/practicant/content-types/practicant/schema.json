@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "practicants",
+  "info": {
+    "singularName": "practicant",
+    "pluralName": "practicants",
+    "displayName": "practicant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_pract": {
+      "type": "string"
+    },
+    "email_practicant": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password_pract": {
+      "type": "password"
+    },
+    "registration_date": {
+      "type": "date"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "Practicante",
+        "Administrador"
+      ]
+    },
+    "progresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::progress.progress",
+      "mappedBy": "practicant"
+    },
+    "session_practs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::session-pract.session-pract"
+    },
+    "exercise_practs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exercise-pract.exercise-pract",
+      "mappedBy": "practicant"
+    }
+  }
+}

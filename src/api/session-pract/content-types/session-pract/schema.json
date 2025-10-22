@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "session_practs",
+  "info": {
+    "singularName": "session-pract",
+    "pluralName": "session-practs",
+    "displayName": "session_pract"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time_session": {
+      "type": "biginteger"
+    },
+    "administrator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::administrator.administrator"
+    }
+  }
+}

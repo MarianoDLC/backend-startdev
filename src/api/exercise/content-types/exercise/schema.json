@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "singularName": "exercise",
+    "pluralName": "exercises",
+    "displayName": "exercise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_exercise": {
+      "type": "string"
+    },
+    "description_exercise": {
+      "type": "blocks"
+    },
+    "example_code": {
+      "type": "string"
+    },
+    "solution_code": {
+      "type": "string"
+    },
+    "expected_output": {
+      "type": "string"
+    },
+    "isCorrect": {
+      "type": "boolean"
+    },
+    "hints": {
+      "type": "component",
+      "component": "shared.hints",
+      "repeatable": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "exercises"
+    },
+    "modifies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modifie.modifie",
+      "mappedBy": "exercise"
+    },
+    "exercise_practs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exercise-pract.exercise-pract",
+      "mappedBy": "exercise"
+    }
+  }
+}

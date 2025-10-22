@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_hints",
+  "info": {
+    "displayName": "Hints",
+    "icon": "lightbulb"
+  },
+  "options": {},
+  "attributes": {
+    "hint_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

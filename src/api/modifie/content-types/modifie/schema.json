@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modifies",
+  "info": {
+    "singularName": "modifie",
+    "pluralName": "modifies",
+    "displayName": " modifie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_modifies": {
+      "type": "date"
+    },
+    "administrator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::administrator.administrator",
+      "inversedBy": "modifies"
+    },
+    "exercise": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exercise.exercise",
+      "inversedBy": "modifies"
+    }
+  }
+}

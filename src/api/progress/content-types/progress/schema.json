@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progresses",
+  "info": {
+    "singularName": "progress",
+    "pluralName": "progresses",
+    "displayName": " progress"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "progress": {
+      "type": "integer"
+    },
+    "practicant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::practicant.practicant",
+      "inversedBy": "progresses"
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "progresses"
+    }
+  }
+}

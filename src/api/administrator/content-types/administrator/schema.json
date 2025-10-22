@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "administrators",
+  "info": {
+    "singularName": "administrator",
+    "pluralName": "administrators",
+    "displayName": "administrator"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_administrator": {
+      "type": "string"
+    },
+    "email_administrator": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "pass_administrator": {
+      "type": "password"
+    },
+    "session_admins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::session-admin.session-admin"
+    },
+    "modifies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modifie.modifie",
+      "mappedBy": "administrator"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "Practicante",
+        "Administrador"
+      ]
+    },
+    "session_admin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::session-admin.session-admin",
+      "inversedBy": "administrator"
+    }
+  }
+}

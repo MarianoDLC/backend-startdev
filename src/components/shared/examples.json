@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_examples",
+  "info": {
+    "displayName": "Examples",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "title_example": {
+      "type": "string"
+    },
+    "code_snipped": {
+      "type": "string"
+    },
+    "explanation": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
